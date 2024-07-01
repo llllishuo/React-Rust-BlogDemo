@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  height: 60px;
+  top: 0;
+  z-index: 1001;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #444;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  left: -200px;
+  height: calc(100% - 60px);
+  transition: left 0.3s ease;
+  padding-top: 100px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}

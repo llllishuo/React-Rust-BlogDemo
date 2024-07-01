@@ -1,0 +1,121 @@
+
+
+.md_main_vertical{
+    display: flex;
+    flex-direction: column;
+    
+}
+.md_main_horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.md_content {
+    position: relative;
+    z-index: 0;
+    /* width: 400px; */
+    /* height: 300px; */
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+    color:aliceblue;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-color: #1a232a;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
+      animation: rotate 4s linear infinite;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 6px;
+      top: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      background: #000;
+      border-radius: 5px;
+    }
+  }
+.md_title{
+    height: min-content;
+    padding: 20px;
+    text-align:center;
+    color:rgb(255, 252, 252);
+    font-size: 35px;
+    background-color: #000000;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    min-height: 30px;
+    align-items: center;
+}
+.nav_item{
+    margin-right: 10px;
+    background-color: rgba(102, 97, 97, 0.5);
+    backdrop-filter: blur(10px);
+    width: 10%;
+    text-align: center;
+}
+.nav_item:hover {
+    background-color: rgba(2, 2, 2, 0.8);
+    border-color: #4c4848;
+}
+.nav_back{
+    margin-right: 10px;
+    background-color: rgba(102, 97, 97, 0.5);
+    backdrop-filter: blur(10px);
+    width: 10%;
+    text-align: center;
+}
+.nav_back:hover {
+    background-color: rgba(2, 2, 2, 0.8);
+    border-color: #4c4848;
+}
+.nav_home{
+    margin-right: 10px;
+    background-color: rgba(102, 97, 97, 0.5);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    text-align: center;
+}
+.nav_home:hover {
+    background-color: rgba(2, 2, 2, 0.8);
+    border-color: #4c4848;
+}
+.tags{
+    width: 20%;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  @keyframes rotate {
+      100% {
+        transform: rotate(1turn);
+      }
+    }  
+      
+@keyframes opacityChange {
+  50% {
+    opacity:.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  
